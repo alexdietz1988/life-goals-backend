@@ -25,7 +25,7 @@ router.get('/', async (req, res) => {
 router.delete('/', async (req, res) => {
     try {
         console.log(req.body);
-        const entryToDelete = await db.Entry.findByIdAndDelete(req.body.itemId);
+        const entryToDelete = await db.Entry.findByIdAndDelete(req.body.entryId);
         if (!entryToDelete) return res.json('Something went wrong');
         return res.json('success');
     } catch (error) {
