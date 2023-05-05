@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
         const newArea = await db.Area.create(req.body);
         console.log(newArea);
         console.log(newArea._id);
-        await db.AreaInfo.create({ areaId: newArea._id, notes: 'default notes', areaStatus: 'default status'});
+        await db.AreaInfo.create({ areaId: newArea._id, notes: '', areaStatus: ''});
         return res.json();
     } catch (error) {
         res.status(400).json(error);
