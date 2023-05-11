@@ -14,7 +14,7 @@ const entrySchema = new mongoose.Schema({
     someday: Boolean,
 
     secondaryText: String,
-    createdOn: {type: Date, default: Date.now},
+    createdAt: {type: Date, default: Date.now},
 })
 
 const Entry = mongoose.model('Entry', entrySchema);
